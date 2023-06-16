@@ -1,6 +1,7 @@
 const { src, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug');
+const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 
 const browserSyncJob = () => {
@@ -17,6 +18,7 @@ const buildSass = () => {
 
   return src('./app/**/*.scss')
     .pipe(sass())
+    .pipe(concat('index.scc'))
     .pipe(dest('build/styles/'))
     .pipe(browserSync.stream());
 }
@@ -25,6 +27,7 @@ const buildPug = () => {
 
   return src('./app/**/*.pug')
     .pipe(pug())
+    .pipe(concat('index.html'))
     .pipe(dest('build/'))
     .pipe(browserSync.stream());
 }
