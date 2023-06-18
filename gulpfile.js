@@ -9,34 +9,44 @@ const browserSyncJob = () => {
     server: "build/"
   });
 
-  watch('./app/**/*.scss', buildSass);
+  watch('./app/bootstrap/*.scss', buildBootstrapSass);
+  watch('./app/sass/*.scss', buildSass);
   watch('./app/**/*.pug', buildPug);
-  copyFile()
+  // copyFile()
 }
 
-const buildSass = () => {
+const buildBootstrapSass = () => {
 
-  return src('./app/**/*.scss')
+  return src('./app/bootstrap/*.scss')
     .pipe(sass())
-    .pipe(concat('index.scc'))
+    .pipe(concat('bootstrap_mod.css'))
     .pipe(dest('build/styles/'))
     .pipe(browserSync.stream());
 }
 
+const buildSass = () => {
+
+  return src('./app/sass/*.scss')
+    .pipe(sass())
+    .pipe(concat('index.css'))
+    .pipe(dest('build/styles/'))
+    .pipe(browserSync.stream());
+}
+
+
 const buildPug = () => {
 
-  return src('./app/**/*.pug')
+  return src('./app/*.pug')
     .pipe(pug())
-    .pipe(concat('index.html'))
     .pipe(dest('build/'))
     .pipe(browserSync.stream());
 }
 
-const copyFile = () => {
+// const copyFile = () => {
     
-  return src('./app/bootstrap/bootstrap.min.css')
-    .pipe(dest('build/bootstrap/'))
-};
+//   return src('./app/bootstrap/bootstrap.min.css')
+//     .pipe(dest('build/bootstrap/'))
+// };
 
 exports.server = browserSyncJob;
-exports.build = parallel(buildSass, buildPug);
+exports.build = parallel(buildBootstrapSass, buildSass, buildPug);
