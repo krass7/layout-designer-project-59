@@ -12,7 +12,7 @@ const browserSyncJob = () => {
   watch('./app/bootstrap/*.scss', buildBootstrapSass);
   watch('./app/sass/*.scss', buildSass);
   watch('./app/**/*.pug', buildPug);
-  // copyFile()
+  copyFile()
 }
 
 const buildBootstrapSass = () => {
@@ -33,7 +33,6 @@ const buildSass = () => {
     .pipe(browserSync.stream());
 }
 
-
 const buildPug = () => {
 
   return src('./app/*.pug')
@@ -42,11 +41,11 @@ const buildPug = () => {
     .pipe(browserSync.stream());
 }
 
-// const copyFile = () => {
+const copyFile = () => {
     
-//   return src('./app/bootstrap/bootstrap.min.css')
-//     .pipe(dest('build/bootstrap/'))
-// };
+  return src('./app/images/**/*.*')
+    .pipe(dest('build/images/'))
+};
 
 exports.server = browserSyncJob;
 exports.build = parallel(buildBootstrapSass, buildSass, buildPug);

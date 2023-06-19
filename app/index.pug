@@ -11,13 +11,8 @@ html(lang='ru')
     link(rel='stylesheet' href='./styles/index.css')
 
   body
-
-    h1(class='text-primary') Шаблон Pug
-    h1(class='text-secondary') Шаблон Pug
-    h1(class='text-success') Шаблон Pug
-    h1(class='text-info') Шаблон Pug
-    h1(class='text-warning') Шаблон Pug
-    h1(class='text-danger') Шаблон Pug
-    h1(class='text-light') Шаблон Pug
-    h1(class='text-dark') Шаблон Pug
-    h1(class='text-gray') Шаблон Pug
+    .container(class='p-0 m-0 border border-white rounded-2')
+      .row(class='')
+        .col-5(class='')
+          include pug/header.pug
+        .col-7
