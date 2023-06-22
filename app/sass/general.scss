@@ -1,8 +1,43 @@
+@mixin hide-scrollbar() {
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
   font-family: 'Roboto', sans-serif;
-  height: 100vh;
-  padding: 24px;
+  margin: 24px;
   background-color: #EFEFEF;
+}
+
+.hide-scrollbar {
+  @include hide-scrollbar;
+}
+
+.link-hover {
+  text-decoration: none;
+  color: #343A40;
+    & div:hover {
+      background: #4545A5;
+        & p {
+          color: #FBFBFB;
+    }
+  }
+}
+
+.status-hover {
+  color: #6C757D;
+    &:hover {
+      color: #EFEFEF;
+    }
 }

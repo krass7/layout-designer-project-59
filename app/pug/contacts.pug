@@ -1,0 +1,51 @@
+-
+  var contacts = {
+    "A": [{
+      name: "Алексей Примадонин",
+      status: "Онлайн",
+      avatar: "/images/avatar_3.jpg"
+    }],
+
+    "В": [{
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "/images/avatar_4.jpg"
+    }],
+
+    "Д": [{
+      name: "Джедай Падаванов",
+      status: "Был онлайн вчера",
+      avatar: "/images/avatar_2.jpg"
+    }],
+
+    "К": [{
+      name: "Кодовёнок Хекслетович",
+      status: "Был онлайн 3 часа назад",
+      avatar: "/images/avatar_1.jpg"
+    },
+    {
+      name: "Королева Верстальщина",
+      status: "Была онлайн вчера",
+      avatar: "/images/avatar_5.jpg"
+    }],
+
+    "П": [{
+      name: "Питонист Джангович",
+      status: "Был онлайн вчера",
+      avatar: "/images/avatar_6.jpg"
+    }],
+  }
+
+.row(class='bg-white py-5 px-4 border-end vh-100 overflow-auto hide-scrollbar' style='border-bottom-left-radius: 16px; max-height: calc(100vh - 7rem)')
+  .col(class='p-0')
+    h2(class='fw-bold mb-4') Контакты
+    div(class='border-0 border-bottom mb-5')
+      input(type='search' class='border-0 p-4 w-100' placeholder='Поиск по контактам' style='outline: none')
+    each people, letter in contacts
+      p(class='text-secondary mt-5 mb-3')= letter
+      each contact in people
+        a(href='' class='link-hover'): div(class='d-flex shadow-sm p-3 mb-3 gap-4')
+          img(src= contact.avatar class='rounded-circle' style ='width: 50px; height: 50px')
+          div(class='d-flex flex-column')
+            p(class='fw-bold mb-0')= contact.name
+            p(class='status-hover small mb-0')= contact.status

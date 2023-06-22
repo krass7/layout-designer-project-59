@@ -11,8 +11,10 @@ html(lang='ru')
     link(rel='stylesheet' href='./styles/index.css')
 
   body
-    .container(class='p-0 m-0 border border-white rounded-2')
-      .row(class='')
-        .col-5(class='')
+    .container
+      .row
+        .col-5
           include pug/header.pug
+          include pug/contacts.pug
         .col-7
+          include pug/welcome_message.pug
