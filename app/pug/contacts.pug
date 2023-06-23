@@ -36,7 +36,7 @@
     }],
   }
 
-.row(class='bg-white py-5 px-4 border-end vh-100 overflow-auto hide-scrollbar' style='border-bottom-left-radius: 16px; max-height: calc(100vh - 7rem)')
+.row(class='bg-white py-5 px-4 border-end vh-100 hide-scrollbar' style='border-bottom-left-radius: 16px; max-height: calc(100vh - 7rem)')
   .col(class='p-0')
     h2(class='fw-bold mb-4') Контакты
     div(class='border-0 border-bottom mb-5')
@@ -48,4 +48,4 @@
           img(src= contact.avatar class='rounded-circle' style ='width: 50px; height: 50px')
           div(class='d-flex flex-column')
             p(class='fw-bold mb-0')= contact.name
-            p(class='status-hover small mb-0')= contact.status
+            p(class='contact-hover small mb-0')= contact.status

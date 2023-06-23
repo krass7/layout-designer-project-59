@@ -13,6 +13,7 @@ const browserSyncJob = () => {
   watch('./app/sass/*.scss', buildSass);
   watch('./app/**/*.pug', buildPug);
   copyFile()
+  copyBootstrapFile()
 }
 
 const buildBootstrapSass = () => {
@@ -45,6 +46,12 @@ const copyFile = () => {
     
   return src('./app/images/**/*.*')
     .pipe(dest('build/images/'))
+};
+
+const copyBootstrapFile = () => {
+    
+  return src('./app/bootstrap/*.js')
+    .pipe(dest('build/styles/'))
 };
 
 exports.server = browserSyncJob;

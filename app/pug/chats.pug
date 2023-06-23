@@ -1,0 +1,37 @@
+-
+  var contacts = [
+    {
+      name: "Вениамин Редакторович",
+      message: "o_O",
+      avatar: "/images/avatar_4.jpg",
+      time: "11:45"
+    },
+
+    {
+      name: "Джедай Падаванов",
+      message: "Привет, скоро третий проект? Уже скоро надо будет выложить",
+      avatar: "/images/avatar_2.jpg",
+      time: "10:12"
+    },
+
+    {
+      name: "Алексей Примадонин",
+      message: "Тесты упали >_<",
+      avatar: "/images/avatar_3.jpg",
+      time: "08:53"
+    },
+  ]
+
+.row(class='bg-white py-5 px-4 border-end vh-100' style='border-bottom-left-radius: 16px; max-height: calc(100vh - 7rem)')
+  .col(class='p-0')
+    h2(class='fw-bold mb-4') Чаты
+    div(class='border-0 border-bottom mb-5')
+      input(type='search' class='border-0 p-4 w-100' placeholder='Поиск по контактам' style='outline: none')
+    each contact in contacts
+      a(href='' class='link-hover'): div(class='d-flex shadow-sm p-3 mb-3 gap-4')
+        img(src= contact.avatar class='rounded-circle' style ='width: 50px; height: 50px')
+        div(class='d-flex flex-column overflow-x-hidden' style='width: 72%')
+          div(class='d-flex justify-content-between')
+            p(class='fw-bold mb-0')= contact.name
+            p(class='contact-hover small mb-0')= contact.time
+          p(class='contact-hover small mb-0 overflow-x-hidden' style='white-space: nowrap; text-overflow: ellipsis')= contact.message
