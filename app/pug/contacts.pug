@@ -39,8 +39,9 @@
 .row(class='bg-white py-5 px-4 border-end vh-100 hide-scrollbar' style='border-bottom-left-radius: 16px; max-height: calc(100vh - 7rem)')
   .col(class='p-0')
     h2(class='fw-bold mb-4') Контакты
-    div(class='border-0 border-bottom mb-5')
-      input(type='search' class='border-0 p-4 w-100' placeholder='Поиск по контактам' style='outline: none')
+    form
+      div(class='border-0 border-bottom mb-5')
+        input(type='search' class='form-control border-0 shadow-none p-4' placeholder='Поиск по контактам')
     each people, letter in contacts
       p(class='text-secondary mt-5 mb-3')= letter
       each contact in people
