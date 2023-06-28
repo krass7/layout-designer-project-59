@@ -57,7 +57,25 @@ $utilities: map-merge(
         0: 0,
         3: var(--#{$prefix}border-radius)
       )
-    )
+    ),
+    "rounded-top-right": (
+      property: border-top-right-radius,
+      class: rounded-top-right,
+      responsive: true,
+      values: (
+        0: 0,
+        3: var(--#{$prefix}border-radius)
+      )
+    ),
+    "rounded-bottom-right": (
+      property: border-bottom-right-radius,
+      class: rounded-bottom-right,
+      responsive: true,
+      values: (
+        0: 0,
+        3: var(--#{$prefix}border-radius)
+      )
+    ),
   )
 );
 
