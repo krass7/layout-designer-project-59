@@ -23,10 +23,10 @@ $custom-colors: (
   "gray": $gray
 );
 $custom-breakpoints: (
-  "xxl": 1600px
+  "2xl": 1600px
 );
 $custom-max-widths: (
-  "xxl": 1540px
+  "2xl": 1540px
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
