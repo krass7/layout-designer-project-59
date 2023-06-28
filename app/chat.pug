@@ -1,5 +1,22 @@
-.row(class='bg-white rounded-end')
-  .col(class='p-0')
-    include pug/chat_header.pug
-    include pug/chat_messages.pug
-    include pug/chat_form.pug
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    
+    title Messenger "Hexlet Chat"
+
+    link(rel='stylesheet' href='./styles/bootstrap_mod.css')
+    link(rel='stylesheet' href='./styles/index.css')
+    script(src='./styles/bootstrap.min.js')
+
+  body
+    .container
+      .row
+        .col-12.col-lg-6.col-xl-5.col-xxl-4.d-flex.flex-column
+          include pug/navigation.pug
+        .d-none.d-lg-block.col-lg-6.col-xl-7.col-xxl-8
+          include pug/chat_header.pug
+          include pug/chat_messages.pug
+          include pug/chat_form.pug
