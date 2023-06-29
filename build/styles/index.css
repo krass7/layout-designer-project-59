@@ -37,3 +37,12 @@ body {
 .contact-hover:hover {
   color: #EFEFEF;
 }
+
+.mh-calc {
+  max-height: calc(100vh - 7.5rem);
+}
+@media (max-width: 576px) {
+  .mh-calc {
+    max-height: calc(100vh - 4.5rem);
+  }
+}
