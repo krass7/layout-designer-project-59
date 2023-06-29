@@ -45,8 +45,8 @@
     each people, letter in contacts
       p(class='text-secondary mb-3')= letter
       each contact in people
-        a(href='' class='link-hover'): div(class='d-flex shadow-sm px-3 py-4 mb-5 gap-4')
+        a(href='' class='link-hover'): div(class='d-flex shadow-sm px-3 mb-5 gap-4')
           img(src= contact.avatar class='rounded-circle' style ='width: 50px; height: 50px')
-          div(class='d-flex flex-column')
+          div(class='d-flex flex-column py-4')
             p(class='fw-bold mb-0')= contact.name
             p(class='contact-hover small mb-0')= contact.status
