@@ -46,3 +46,12 @@ body {
     max-height: calc(100vh - 4.5rem);
   }
 }
+
+.mh-calc-chat {
+  max-height: calc(100vh - 14.1rem);
+}
+@media (max-width: 576px) {
+  .mh-calc-chat {
+    max-height: calc(100vh - 15.6rem);
+  }
+}
