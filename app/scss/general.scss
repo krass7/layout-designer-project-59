@@ -14,7 +14,7 @@
 
 body {
   padding: 24px;
-  background-color: #EFEFEF;
+  background-color: #efefef;
 
   @media (width <= 576px) {
     padding: 0;
@@ -27,23 +27,23 @@ body {
 
 .link-hover {
   text-decoration: none;
-  color: #343A40;
+  color: #343a40;
 
-    & div:hover {
-      background: #4545A5;
+  & div:hover {
+    background: #4545a5;
 
-        & p {
-          color: #FBFBFB;
+    & p {
+      color: #fbfbfb;
     }
   }
 }
 
 .contact-hover {
-  color: #6C757D;
+  color: #6c757d;
 
-    &:hover {
-      color: #EFEFEF;
-    }
+  &:hover {
+    color: #efefef;
+  }
 }
 
 .mh-calc {
@@ -71,5 +71,5 @@ body {
 
   @media (width <= 576px) {
     width: 100%;
-  } 
+  }
 }
