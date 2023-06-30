@@ -58,7 +58,7 @@ body {
   max-height: calc(100vh - 14.1rem);
 
   @media (max-width: 576px) {
-    max-height: calc(100vh - 15.6rem);
+    max-height: calc(100vh - 14.6rem);
   }
   @media (min-width: 576px) and (max-width: 992px) {
     max-height: calc(100vh - 18.6rem);
@@ -70,6 +70,5 @@ body {
 
   @media (max-width: 576px) {
     width: 100%;
-  }
-  
+  } 
 }

@@ -52,7 +52,7 @@ body {
 }
 @media (max-width: 576px) {
   .mh-calc-chat {
-    max-height: calc(100vh - 15.6rem);
+    max-height: calc(100vh - 14.6rem);
   }
 }
 @media (min-width: 576px) and (max-width: 992px) {
