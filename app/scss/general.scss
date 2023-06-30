@@ -16,7 +16,7 @@ body {
   padding: 24px;
   background-color: #EFEFEF;
 
-  @media (max-width: 576px) {
+  @media (width <= 576px) {
     padding: 0;
   }
 }
@@ -28,8 +28,10 @@ body {
 .link-hover {
   text-decoration: none;
   color: #343A40;
+
     & div:hover {
       background: #4545A5;
+
         & p {
           color: #FBFBFB;
     }
@@ -38,6 +40,7 @@ body {
 
 .contact-hover {
   color: #6C757D;
+
     &:hover {
       color: #EFEFEF;
     }
@@ -46,7 +49,7 @@ body {
 .mh-calc {
   max-height: calc(100vh - 7.5rem);
 
-  @media (max-width: 576px) {
+  @media (width <= 576px) {
     max-height: calc(100vh - 4.5rem);
   }
 }
@@ -54,10 +57,11 @@ body {
 .mh-calc-chat {
   max-height: calc(100vh - 14.1rem);
 
-  @media (max-width: 576px) {
+  @media (width <= 576px) {
     max-height: calc(100vh - 14.6rem);
   }
-  @media (min-width: 576px) and (max-width: 992px) {
+
+  @media (width >= 576px) and (width <= 992px) {
     max-height: calc(100vh - 18.6rem);
   }
 }
@@ -65,7 +69,7 @@ body {
 .width-block {
   width: 67%;
 
-  @media (max-width: 576px) {
+  @media (width <= 576px) {
     width: 100%;
   } 
 }
