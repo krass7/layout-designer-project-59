@@ -60,4 +60,16 @@ body {
   @media (max-width: 576px) {
     max-height: calc(100vh - 15.6rem);
   }
+  @media (min-width: 576px) and (max-width: 992px) {
+    max-height: calc(100vh - 18.6rem);
+  }
+}
+
+.width-block {
+  width: 67%;
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+  
 }

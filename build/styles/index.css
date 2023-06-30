@@ -55,3 +55,17 @@ body {
     max-height: calc(100vh - 15.6rem);
   }
 }
+@media (min-width: 576px) and (max-width: 992px) {
+  .mh-calc-chat {
+    max-height: calc(100vh - 18.6rem);
+  }
+}
+
+.width-block {
+  width: 67%;
+}
+@media (max-width: 576px) {
+  .width-block {
+    width: 100%;
+  }
+}
